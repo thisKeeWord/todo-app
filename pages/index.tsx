@@ -2,6 +2,7 @@ import React, { FunctionComponent, useState } from 'react'
 import { Task, ToggleTask } from '../types/index'
 import { TaskList } from '../components/taskList'
 import { InputForm } from '../components/inputForm'
+import { PokemonItem } from '../components/pokemonItem'
 
 const initial_tasks: Task[] = []
 
@@ -41,6 +42,7 @@ const App: FunctionComponent = () => {
   return (
     <div>
       <InputForm onSubmit={onSubmitTask} />
+      <PokemonItem tasks={tasks} />
       <TaskList
         tasks={tasks}
         toggleTask={toggleTask}
